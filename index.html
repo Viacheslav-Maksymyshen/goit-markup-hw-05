@@ -26,7 +26,9 @@
             ><span class="logo-span">Web</span>Studio</a
           >
           <ul class="nav list">
-            <li class="item"><a href="./index.html" class="link">Студия</a></li>
+            <li class="item">
+              <a href="./index.html" class="link current">Студия</a>
+            </li>
             <li class="item">
               <a href="./portfolio.html" class="link">Портфолио</a>
             </li>
@@ -61,11 +63,22 @@
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button class="order-button" name="button_order" type="button">
+        <button
+          data-modal-open
+          class="order-button"
+          name="button_order"
+          type="button"
+        >
           Заказать услугу
         </button>
-        <div class="backdrop">
-          <div class="modal"></div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="button-modal" type="button" data-modal-close>
+              <svg class="close-icon">
+                <use href="./images/icon.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <!-- our strengths-->
@@ -130,28 +143,37 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="project-list list">
             <li class="item">
-              <img
-                src="./images/box_1.jpg"
-                alt="Проект-1"
-                width="370"
-                height="294"
-              />
+              <div class="project-name">
+                <img
+                  src="./images/box_1.jpg"
+                  alt="Проект-1"
+                  width="370"
+                  height="294"
+                />
+                <p class="project-label">Десктопные приложения</p>
+              </div>
             </li>
             <li class="item">
-              <img
-                src="./images/box_2.jpg"
-                alt="Проект-2"
-                width="370"
-                height="294"
-              />
+              <div class="project-name">
+                <img
+                  src="./images/box_2.jpg"
+                  alt="Проект-2"
+                  width="370"
+                  height="294"
+                />
+                <p class="project-label">Мобильные приложения</p>
+              </div>
             </li>
             <li class="item">
-              <img
-                src="./images/box_3.jpg"
-                alt="Проект-3"
-                width="370"
-                height="294"
-              />
+              <div class="project-name">
+                <img
+                  src="./images/box_3.jpg"
+                  alt="Проект-3"
+                  width="370"
+                  height="294"
+                />
+                <p class="project-label">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -447,5 +469,6 @@
         </ul>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
